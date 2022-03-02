@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "NumberLists/1.0.0": {
+        "dependencies": {
+          "CLLibrary": "1.0.0"
+        },
+        "runtime": {
+          "NumberLists.dll": {}
+        }
+      },
+      "CLLibrary/1.0.0": {
+        "runtime": {
+          "CLLibrary.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "NumberLists/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CLLibrary/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
