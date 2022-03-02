@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {}
+    "net5.0": {
+      "CLLibrary/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/CLLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CLLibrary.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "CLLibrary/1.0.0": {
+      "type": "project",
+      "path": "../CLLibrary/CLLibrary.csproj",
+      "msbuildProject": "../CLLibrary/CLLibrary.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net5.0": []
+    "net5.0": [
+      "CLLibrary >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\disco\\.nuget\\packages\\": {},
@@ -41,7 +60,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\disco\\Projects\\NumberLists\\CLLibrary\\CLLibrary.csproj": {
+              "projectPath": "C:\\Users\\disco\\Projects\\NumberLists\\CLLibrary\\CLLibrary.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
