@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "K4luMckU90MU8nYE72jsaC/OuFmTZJnv6bcxk14kQyRVM/M2XnJODMuohenDCGuTgtvtNWb33gn4Q8zU7T2p0A==",
+  "dgSpecHash": "j8mTWxpkExPxw7yPVl/QojEgTIpk78dMX9YNx6KrZgFtYIp+9xLIOyuKRztsoPD4y++LNDy8tHG3ZTqtUfpYOQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\disco\\Projects\\NumberLists\\NumberLists\\NumberLists.csproj",
+  "projectFilePath": "C:\\Users\\disco\\Projects\\NumberLists\\NumberLists\\DisplayNumberLists.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

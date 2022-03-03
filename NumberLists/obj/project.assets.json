@@ -34,9 +34,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\disco\\Projects\\NumberLists\\NumberLists\\NumberLists.csproj",
-      "projectName": "NumberLists",
-      "projectPath": "C:\\Users\\disco\\Projects\\NumberLists\\NumberLists\\NumberLists.csproj",
+      "projectUniqueName": "C:\\Users\\disco\\Projects\\NumberLists\\NumberLists\\DisplayNumberLists.csproj",
+      "projectName": "DisplayNumberLists",
+      "projectPath": "C:\\Users\\disco\\Projects\\NumberLists\\NumberLists\\DisplayNumberLists.csproj",
       "packagesPath": "C:\\Users\\disco\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\disco\\Projects\\NumberLists\\NumberLists\\obj\\",
       "projectStyle": "PackageReference",
