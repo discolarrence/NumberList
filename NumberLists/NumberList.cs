@@ -11,10 +11,10 @@ namespace DisplayNumberLists
         }
 
         //display numbers in one line with spaces between
-        public static void WriteListWithSpacesAndNewLine(NumberList numberList)
+        public void WriteListWithSpacesAndNewLine()
         {
             Console.WriteLine();
-            foreach (int number in numberList)
+            foreach (int number in this)
             {
                 Console.Write($"{number} ");
             }

@@ -22,20 +22,20 @@ namespace DisplayNumberLists
                 {
                     case "1":
                         NumberList evenNumberList = NumberListGenerator.ListEvenNumbers(mainMenu.StartNumber, mainMenu.EndNumber);
-                        NumberList.WriteListWithSpacesAndNewLine(evenNumberList);
+                        evenNumberList.WriteListWithSpacesAndNewLine();
                         break;
                     case "2":
                         NumberList oddNumberList = NumberListGenerator.ListOddNumbers(mainMenu.StartNumber, mainMenu.EndNumber);
-                        NumberList.WriteListWithSpacesAndNewLine(oddNumberList);
+                        oddNumberList.WriteListWithSpacesAndNewLine();
                         break;
                     case "3":
                         NumberList primeNumberList = NumberListGenerator.ListPrimeNumbers(mainMenu.StartNumber, mainMenu.EndNumber);
-                        NumberList.WriteListWithSpacesAndNewLine(primeNumberList);
+                        primeNumberList.WriteListWithSpacesAndNewLine();
                         break;
                     case "4":
                         int divisor = CodeLouisvilleAppBase.Prompt4Integer("What number would you like to list multiples of?\n");
                         NumberList multiplesList = NumberListGenerator.ListMultiples(mainMenu.StartNumber, mainMenu.EndNumber, divisor);
-                        NumberList.WriteListWithSpacesAndNewLine(multiplesList);
+                        multiplesList.WriteListWithSpacesAndNewLine();
                         break;
                     case "9":
                         mainMenu = new MainMenu();
