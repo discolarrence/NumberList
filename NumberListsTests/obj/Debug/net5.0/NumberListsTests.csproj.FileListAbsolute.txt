@@ -1,9 +1,5 @@
 C:\Users\disco\Projects\NumberLists\NumberListsTests\bin\Debug\net5.0\CoverletSourceRootsMapping
 C:\Users\disco\Projects\NumberLists\NumberListsTests\bin\Debug\net5.0\testhost.dll
-C:\Users\disco\Projects\NumberLists\NumberListsTests\bin\Debug\net5.0\DisplayNumberLists.deps.json
-C:\Users\disco\Projects\NumberLists\NumberListsTests\bin\Debug\net5.0\DisplayNumberLists.runtimeconfig.json
-C:\Users\disco\Projects\NumberLists\NumberListsTests\bin\Debug\net5.0\DisplayNumberLists.runtimeconfig.dev.json
-C:\Users\disco\Projects\NumberLists\NumberListsTests\bin\Debug\net5.0\DisplayNumberLists.exe
 C:\Users\disco\Projects\NumberLists\NumberListsTests\bin\Debug\net5.0\testhost.exe
 C:\Users\disco\Projects\NumberLists\NumberListsTests\bin\Debug\net5.0\Microsoft.TestPlatform.PlatformAbstractions.dll
 C:\Users\disco\Projects\NumberLists\NumberListsTests\bin\Debug\net5.0\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
@@ -93,9 +89,7 @@ C:\Users\disco\Projects\NumberLists\NumberListsTests\bin\Debug\net5.0\zh-Hant\Mi
 C:\Users\disco\Projects\NumberLists\NumberListsTests\bin\Debug\net5.0\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
 C:\Users\disco\Projects\NumberLists\NumberListsTests\bin\Debug\net5.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
 C:\Users\disco\Projects\NumberLists\NumberListsTests\bin\Debug\net5.0\CLLibrary.dll
-C:\Users\disco\Projects\NumberLists\NumberListsTests\bin\Debug\net5.0\DisplayNumberLists.dll
 C:\Users\disco\Projects\NumberLists\NumberListsTests\bin\Debug\net5.0\CLLibrary.pdb
-C:\Users\disco\Projects\NumberLists\NumberListsTests\bin\Debug\net5.0\DisplayNumberLists.pdb
 C:\Users\disco\Projects\NumberLists\NumberListsTests\obj\Debug\net5.0\NumberListsTests.csproj.AssemblyReference.cache
 C:\Users\disco\Projects\NumberLists\NumberListsTests\obj\Debug\net5.0\NumberListsTests.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\disco\Projects\NumberLists\NumberListsTests\obj\Debug\net5.0\NumberListsTests.AssemblyInfoInputs.cache
@@ -106,3 +100,9 @@ C:\Users\disco\Projects\NumberLists\NumberListsTests\obj\Debug\net5.0\NumberList
 C:\Users\disco\Projects\NumberLists\NumberListsTests\obj\Debug\net5.0\ref\NumberListsTests.dll
 C:\Users\disco\Projects\NumberLists\NumberListsTests\obj\Debug\net5.0\NumberListsTests.pdb
 C:\Users\disco\Projects\NumberLists\NumberListsTests\obj\Debug\net5.0\NumberListsTests.genruntimeconfig.cache
+C:\Users\disco\Projects\NumberLists\NumberListsTests\bin\Debug\net5.0\NumberLists.deps.json
+C:\Users\disco\Projects\NumberLists\NumberListsTests\bin\Debug\net5.0\NumberLists.runtimeconfig.json
+C:\Users\disco\Projects\NumberLists\NumberListsTests\bin\Debug\net5.0\NumberLists.runtimeconfig.dev.json
+C:\Users\disco\Projects\NumberLists\NumberListsTests\bin\Debug\net5.0\NumberLists.exe
+C:\Users\disco\Projects\NumberLists\NumberListsTests\bin\Debug\net5.0\NumberLists.dll
+C:\Users\disco\Projects\NumberLists\NumberListsTests\bin\Debug\net5.0\NumberLists.pdb

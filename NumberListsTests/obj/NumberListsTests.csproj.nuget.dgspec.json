@@ -97,8 +97,8 @@
               "C:\\Users\\disco\\Projects\\NumberLists\\CLLibrary\\CLLibrary.csproj": {
                 "projectPath": "C:\\Users\\disco\\Projects\\NumberLists\\CLLibrary\\CLLibrary.csproj"
               },
-              "C:\\Users\\disco\\Projects\\NumberLists\\NumberLists\\DisplayNumberLists.csproj": {
-                "projectPath": "C:\\Users\\disco\\Projects\\NumberLists\\NumberLists\\DisplayNumberLists.csproj"
+              "C:\\Users\\disco\\Projects\\NumberLists\\NumberLists\\NumberLists.csproj": {
+                "projectPath": "C:\\Users\\disco\\Projects\\NumberLists\\NumberLists\\NumberLists.csproj"
               }
             }
           }
@@ -149,12 +149,12 @@
         }
       }
     },
-    "C:\\Users\\disco\\Projects\\NumberLists\\NumberLists\\DisplayNumberLists.csproj": {
+    "C:\\Users\\disco\\Projects\\NumberLists\\NumberLists\\NumberLists.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\disco\\Projects\\NumberLists\\NumberLists\\DisplayNumberLists.csproj",
-        "projectName": "DisplayNumberLists",
-        "projectPath": "C:\\Users\\disco\\Projects\\NumberLists\\NumberLists\\DisplayNumberLists.csproj",
+        "projectUniqueName": "C:\\Users\\disco\\Projects\\NumberLists\\NumberLists\\NumberLists.csproj",
+        "projectName": "NumberLists",
+        "projectPath": "C:\\Users\\disco\\Projects\\NumberLists\\NumberLists\\NumberLists.csproj",
         "packagesPath": "C:\\Users\\disco\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\disco\\Projects\\NumberLists\\NumberLists\\obj\\",
         "projectStyle": "PackageReference",

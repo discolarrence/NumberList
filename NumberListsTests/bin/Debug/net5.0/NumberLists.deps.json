@@ -6,12 +6,12 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v5.0": {
-      "DisplayNumberLists/1.0.0": {
+      "NumberLists/1.0.0": {
         "dependencies": {
           "CLLibrary": "1.0.0"
         },
         "runtime": {
-          "DisplayNumberLists.dll": {}
+          "NumberLists.dll": {}
         }
       },
       "CLLibrary/1.0.0": {
@@ -22,7 +22,7 @@
     }
   },
   "libraries": {
-    "DisplayNumberLists/1.0.0": {
+    "NumberLists/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
