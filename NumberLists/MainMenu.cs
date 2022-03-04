@@ -9,9 +9,14 @@ namespace DisplayNumberLists
 
         public MainMenu()
         {
+            //set starting and ending numbers
             _startNumber = CodeLouisvilleAppBase.Prompt4Integer("What is the first number for the number list?\n");
-            _endNumber = CodeLouisvilleAppBase.Prompt4Integer("What is the last number for the number list?\n");
-
+            //check that ending number > starting number
+            while (_endNumber < _startNumber)
+            {
+                _endNumber = CodeLouisvilleAppBase.Prompt4Integer("What is the last number for the number list?\n");
+            }
+            //build menu with user number choices
             AddMenuItem("1", $"List all the even numbers from {_startNumber} to {_endNumber}");
             AddMenuItem("2", $"List all the odd numbers from {_startNumber} to {_endNumber}");
             AddMenuItem("3", $"List all the prime numbers from {_startNumber} to {_endNumber}");
