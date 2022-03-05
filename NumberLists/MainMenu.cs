@@ -1,46 +1,50 @@
 ﻿using CodeLouisvilleLibrary;
+using System;
 
-namespace DisplayNumberLists
+namespace NumberLists
 {
-    class MainMenu : Menu<string>
+    class MainMenu : NumberListMenuBase
     {
-        private int _startNumber;
-        private int _endNumber;
-
         public MainMenu()
         {
-            //set starting and ending numbers
-            _startNumber = CodeLouisvilleAppBase.Prompt4Integer("What is the first number for the number list?\n");
-            //check that ending number > starting number
-            while (_endNumber < _startNumber)
-            {
-                _endNumber = CodeLouisvilleAppBase.Prompt4Integer("What is the last number for the number list?\n");
-            }
-            //build menu with user number choices
-            AddMenuItem("1", $"List all the even numbers from {_startNumber} to {_endNumber}");
-            AddMenuItem("2", $"List all the odd numbers from {_startNumber} to {_endNumber}");
-            AddMenuItem("3", $"List all the prime numbers from {_startNumber} to {_endNumber}");
-            AddMenuItem("4", $"List all the multiples of X between {_startNumber} and {_endNumber}");
-            AddMenuItem("9", "Choose new range for list");
-            AddMenuItem("0", "Exit");
-        }
+            Console.WriteLine("This app displays lists of numbers. Press any key to continue.");
+            Console.ReadKey();
+            Console.Clear();
 
-        public int StartNumber
-        {
-            get { return _startNumber; }
-            set { _startNumber = value; }
-        }
-
-        public int EndNumber
-        {
-            get { return _endNumber; }
-            set { _endNumber = value; }
+            AddMenuItem("1", $"Arithmatic Sequences");
+            AddMenuItem("2", $"Geometric Sequences");
+            AddMenuItem("3", $"Factors");
+            AddMenuItem("4", $"Special Numbers");
         }
 
         public string GetMenuChoice()
         {
-            return CodeLouisvilleAppBase.Prompt4MenuItem("Choose a type of number list to display.", this);
+            return CodeLouisvilleAppBase.Prompt4MenuItem("Choose a type of list to display.", this);
         }
 
+        public void ExecuteMainMenuChoice()
+        {
+            while (CurrentMenuChoice.ToUpper() != "X")
+            {
+                CurrentMenuChoice = GetMenuChoice();
+
+                switch (CurrentMenuChoice)
+                {
+                    case "1":
+                        ArithmaticListMenu arithmaticListMenu = new ArithmaticListMenu();
+                        arithmaticListMenu.ExecuteArithmaticMenuChoice();
+                        break;
+                    case "2":
+                        Console.WriteLine("geometric list menu coming");
+                        break;
+                    case "3":
+                        Console.WriteLine("factor list menu coming");
+                        break;
+                    case "4":
+                        Console.WriteLine("special number list menu coming");
+                        break;
+                }
+            }
+        }
     }
 }

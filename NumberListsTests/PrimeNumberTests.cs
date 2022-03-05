@@ -1,7 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using DisplayNumberLists;
+using NumberLists;
 
-namespace DisplayNumberListsTests
+namespace NumberListsTests
 {
     [TestClass]
     public class PrimeNumberTests
@@ -14,7 +14,7 @@ namespace DisplayNumberListsTests
             bool expected = true;
 
             //--Act
-            bool actual = NumberListGenerator.IsPrimeNumber(numberToTest);
+            bool actual = ArithmaticListGenerator.IsPrimeNumber(numberToTest);
 
             //--Assert
             Assert.AreEqual(expected, actual);
@@ -28,7 +28,7 @@ namespace DisplayNumberListsTests
             bool expected = false;
 
             //--Act
-            bool actual = NumberListGenerator.IsPrimeNumber(numberToTest);
+            bool actual = ArithmaticListGenerator.IsPrimeNumber(numberToTest);
 
             //--Assert
             Assert.AreEqual(expected, actual);

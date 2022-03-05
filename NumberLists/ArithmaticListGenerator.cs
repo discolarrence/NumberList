@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DisplayNumberLists
+namespace NumberLists
 {
-    public static class NumberListGenerator
+    public static class ArithmaticListGenerator
     {
         public static NumberList ListEvenNumbers(int startNumber, int endNumber)
         {

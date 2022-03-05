@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace DisplayNumberLists
+namespace NumberLists
 {
     public class NumberList : List<int>
     {
@@ -19,6 +19,11 @@ namespace DisplayNumberLists
                 Console.Write($"{number} ");
             }
             Console.Write("\n\n");
+        }
+
+        public bool Save()
+        {
+            return true;
         }
     }
 }

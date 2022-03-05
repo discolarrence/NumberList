@@ -1,10 +1,10 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using DisplayNumberLists;
+using NumberLists;
 
 namespace DisplayNumberListsTests
 {
     [TestClass]
-    public class NumberListGeneratorTests
+    public class ArithmaticListGeneratorTests
     {
         [TestMethod]
         public void ListEvenNumbersStartNumberIsEven()
@@ -15,7 +15,7 @@ namespace DisplayNumberListsTests
             NumberList expected = new NumberList { 4, 6, 8, 10 };
 
             //--Act
-            NumberList actual = NumberListGenerator.ListEvenNumbers(startNumber, endNumber);
+            NumberList actual = ArithmaticListGenerator.ListEvenNumbers(startNumber, endNumber);
 
             //--Assert
             CollectionAssert.AreEquivalent(expected, actual);
@@ -30,7 +30,7 @@ namespace DisplayNumberListsTests
             NumberList expected = new NumberList { 4, 6, 8, 10 };
 
             //--Act
-            NumberList actual = NumberListGenerator.ListEvenNumbers(startNumber, endNumber);
+            NumberList actual = ArithmaticListGenerator.ListEvenNumbers(startNumber, endNumber);
 
             //--Assert
             CollectionAssert.AreEquivalent(expected, actual);
@@ -45,7 +45,7 @@ namespace DisplayNumberListsTests
             NumberList expected = new NumberList { 5, 7, 9 };
 
             //--Act
-            NumberList actual = NumberListGenerator.ListOddNumbers(startNumber, endNumber);
+            NumberList actual = ArithmaticListGenerator.ListOddNumbers(startNumber, endNumber);
 
             //--Assert
             CollectionAssert.AreEquivalent(expected, actual);
@@ -60,7 +60,7 @@ namespace DisplayNumberListsTests
             NumberList expected = new NumberList { 5, 7, 9};
 
             //--Act
-            NumberList actual = NumberListGenerator.ListOddNumbers(startNumber, endNumber);
+            NumberList actual = ArithmaticListGenerator.ListOddNumbers(startNumber, endNumber);
 
             //--Assert
             CollectionAssert.AreEquivalent(expected, actual);
