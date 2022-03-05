@@ -7,7 +7,7 @@ namespace NumberLists
     {
         static void Main(string[] args)
         {
-            MainMenu mainMenu = new MainMenu();
+            NumberListMainMenu mainMenu = new NumberListMainMenu();
             mainMenu.ExecuteMainMenuChoice();
         }
        

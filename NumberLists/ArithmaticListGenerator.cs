@@ -45,18 +45,6 @@ namespace NumberLists
             return numberList;
         }
 
-        public static NumberList ListPrimeNumbers(int startNumber, int endNumber)
-        {
-            NumberList numberList = new NumberList();
-            for (int i = startNumber; i <= endNumber; i++)
-            {
-                if (IsPrimeNumber(i))
-                {
-                    numberList.Add(i);
-                }
-            }
-            return numberList;
-        }
 
         public static NumberList ListMultiples(int startNumber, int endNumber, int divisor)
         {
@@ -71,16 +59,5 @@ namespace NumberLists
             return numberList;
         }
 
-        public static bool IsPrimeNumber(int number)
-        {
-            for (int i = 2; i < number; i++)
-            {
-                if (number % i == 0)
-                {
-                    return false;
-                }
-            }
-            return true;
-        }
     }
 }

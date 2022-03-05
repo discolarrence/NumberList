@@ -14,7 +14,7 @@ namespace NumberListsTests
             bool expected = true;
 
             //--Act
-            bool actual = ArithmaticListGenerator.IsPrimeNumber(numberToTest);
+            bool actual = SpecialNumberListGenerator.IsPrimeNumber(numberToTest);
 
             //--Assert
             Assert.AreEqual(expected, actual);
@@ -28,7 +28,7 @@ namespace NumberListsTests
             bool expected = false;
 
             //--Act
-            bool actual = ArithmaticListGenerator.IsPrimeNumber(numberToTest);
+            bool actual = SpecialNumberListGenerator.IsPrimeNumber(numberToTest);
 
             //--Assert
             Assert.AreEqual(expected, actual);

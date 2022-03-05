@@ -3,9 +3,17 @@ using System;
 
 namespace NumberLists
 {
-    class MainMenu : NumberListMenuBase
+    class NumberListMainMenu : NumberListMenuBase
     {
-        public MainMenu()
+        private new string _exit = "the Number List application";
+
+        public new string Exit
+        {
+            get { return _exit; }
+            set { _exit = value; }
+        }
+
+        public NumberListMainMenu()
         {
             Console.WriteLine("This app displays lists of numbers. Press any key to continue.");
             Console.ReadKey();
@@ -41,7 +49,11 @@ namespace NumberLists
                         Console.WriteLine("factor list menu coming");
                         break;
                     case "4":
-                        Console.WriteLine("special number list menu coming");
+                        SpecialNumberListMenu specialNumberListMenu = new SpecialNumberListMenu();
+                        specialNumberListMenu.ExecuteSpecialNumberListMenuChoice();
+                        break;
+                    default:
+                        CurrentMenuChoice = "0";
                         break;
                 }
             }
