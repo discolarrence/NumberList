@@ -9,23 +9,24 @@ namespace NumberLists
 {
     class SpecialNumberListMenu : NumberListMenuBase
     {
-        private int _terms;
+        private int _termsInList;
 
         public SpecialNumberListMenu()
         {
             //set min and max numbers
-            _terms = CodeLouisvilleAppBase.Prompt4Integer("How many numbers would you like in your list?\n");
+            _termsInList = CodeLouisvilleAppBase.Prompt4Integer("How many numbers would you like in your list?\n");
            
             //build menu with user number choices
-            AddMenuItem("1", $"List the first {_terms} prime numbers");
-            AddMenuItem("2", $"List the first {_terms} triangle numbers");
-            AddMenuItem("3", $"List the first {_terms} Fibonacci numbers");
+            AddMenuItem("1", $"List the first {_termsInList} prime numbers");
+            AddMenuItem("2", $"List the first {_termsInList} triangle numbers");
+            AddMenuItem("3", $"List the first {_termsInList} Fibonacci numbers");
+            AddMenuItem("X", $"Exit {_exit}");
         }
 
-        public int Terms
+        public int TermsInList
         {
-            get { return _terms; }
-            set { _terms = value; }
+            get { return _termsInList; }
+            set { _termsInList = value; }
         }
 
 
@@ -36,26 +37,25 @@ namespace NumberLists
 
         public void ExecuteSpecialNumberListMenuChoice()
         {
-            while (CurrentMenuChoice.ToUpper() != "X")
+            while (CurrentMenuChoice != "X")
             {
                 CurrentMenuChoice = GetMenuChoice();
 
                 switch (CurrentMenuChoice)
                 {
                     case "1":
-                        NumberList primeNumberList = SpecialNumberListGenerator.ListPrimeNumbers(_terms);
+                        NumberList primeNumberList = SpecialNumberListGenerator.ListPrimeNumbers(_termsInList);
                         primeNumberList.WriteListWithSpacesAndNewLine();
                         break;
                     case "2":
-                        NumberList triangleNumberList = SpecialNumberListGenerator.ListTriangleNumbers(_terms);
+                        NumberList triangleNumberList = SpecialNumberListGenerator.ListTriangleNumbers(_termsInList);
                         triangleNumberList.WriteListWithSpacesAndNewLine();
                         break;
                     case "3":
-                        NumberList fibonacciNumberList = SpecialNumberListGenerator.ListFibonacciNumbers(_terms);
+                        NumberList fibonacciNumberList = SpecialNumberListGenerator.ListFibonacciNumbers(_termsInList);
                         fibonacciNumberList.WriteListWithSpacesAndNewLine();
                         break;
                     default:
-                        CurrentMenuChoice = "0";
                         break;
                 }
             }

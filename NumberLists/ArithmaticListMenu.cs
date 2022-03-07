@@ -20,6 +20,7 @@ namespace NumberLists
             AddMenuItem("1", $"List all the even numbers from {_minNumber} to {_maxNumber}");
             AddMenuItem("2", $"List all the odd numbers from {_minNumber} to {_maxNumber}");
             AddMenuItem("3", $"List all the multiples of X between {_minNumber} and v {_maxNumber}");
+            AddMenuItem("X", $"Exit {_exit}");
         }
 
         public int MinNumber
@@ -62,7 +63,6 @@ namespace NumberLists
                         multiplesList.WriteListWithSpacesAndNewLine();
                         break;
                     default:
-                        CurrentMenuChoice = "0";
                         break;
                 }
             }

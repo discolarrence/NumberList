@@ -23,6 +23,7 @@ namespace NumberLists
             AddMenuItem("2", $"Geometric Sequences");
             AddMenuItem("3", $"Factors");
             AddMenuItem("4", $"Special Numbers");
+            AddMenuItem("X", $"Exit {_exit}");
         }
 
         public string GetMenuChoice()
@@ -46,14 +47,14 @@ namespace NumberLists
                         Console.WriteLine("geometric list menu coming");
                         break;
                     case "3":
-                        Console.WriteLine("factor list menu coming");
+                        FactorListMenu factorListMenu = new FactorListMenu();
+                        factorListMenu.ExecuteFactorListMenuChoice();
                         break;
                     case "4":
                         SpecialNumberListMenu specialNumberListMenu = new SpecialNumberListMenu();
                         specialNumberListMenu.ExecuteSpecialNumberListMenuChoice();
                         break;
                     default:
-                        CurrentMenuChoice = "0";
                         break;
                 }
             }

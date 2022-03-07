@@ -9,7 +9,7 @@ namespace NumberLists
 
         public NumberListMenuBase()
         {
-            AddMenuItem("X", $"Exit {_exit}");
+            
         }
        
         public string CurrentMenuChoice
