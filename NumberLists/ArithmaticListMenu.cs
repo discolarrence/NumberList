@@ -6,6 +6,7 @@ namespace NumberLists
     {
         private int _minNumber;
         private int _maxNumber;
+        private string _menuTitle = "Arithmatic Sequences";
 
         public ArithmaticListMenu()
         {
@@ -50,16 +51,16 @@ namespace NumberLists
                 switch (CurrentMenuChoice)
                 {
                     case "1":
-                        NumberList evenNumberList = ArithmaticListGenerator.ListEvenNumbers(MinNumber, MaxNumber);
+                        NumberList evenNumberList = ListGenerator.ListEvenNumbers(MinNumber, MaxNumber);
                         evenNumberList.WriteListWithSpacesAndNewLine();
                         break;
                     case "2":
-                        NumberList oddNumberList = ArithmaticListGenerator.ListOddNumbers(MinNumber, MaxNumber);
+                        NumberList oddNumberList = ListGenerator.ListOddNumbers(MinNumber, MaxNumber);
                         oddNumberList.WriteListWithSpacesAndNewLine();
                         break;
                     case "3":
                         int divisor = CodeLouisvilleAppBase.Prompt4Integer("What number would you like to list multiples of?\n");
-                        NumberList multiplesList = ArithmaticListGenerator.ListMultiples(MinNumber, MaxNumber, divisor);
+                        NumberList multiplesList = ListGenerator.ListMultiples(MinNumber, MaxNumber, divisor);
                         multiplesList.WriteListWithSpacesAndNewLine();
                         break;
                     default:

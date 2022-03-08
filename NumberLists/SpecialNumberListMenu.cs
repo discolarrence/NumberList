@@ -44,15 +44,15 @@ namespace NumberLists
                 switch (CurrentMenuChoice)
                 {
                     case "1":
-                        NumberList primeNumberList = SpecialNumberListGenerator.ListPrimeNumbers(_termsInList);
+                        NumberList primeNumberList = ListGenerator.ListPrimeNumbers(_termsInList);
                         primeNumberList.WriteListWithSpacesAndNewLine();
                         break;
                     case "2":
-                        NumberList triangleNumberList = SpecialNumberListGenerator.ListTriangleNumbers(_termsInList);
+                        NumberList triangleNumberList = ListGenerator.ListTriangleNumbers(_termsInList);
                         triangleNumberList.WriteListWithSpacesAndNewLine();
                         break;
                     case "3":
-                        NumberList fibonacciNumberList = SpecialNumberListGenerator.ListFibonacciNumbers(_termsInList);
+                        NumberList fibonacciNumberList = ListGenerator.ListFibonacciNumbers(_termsInList);
                         fibonacciNumberList.WriteListWithSpacesAndNewLine();
                         break;
                     default:

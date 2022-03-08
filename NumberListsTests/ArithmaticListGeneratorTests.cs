@@ -15,7 +15,7 @@ namespace DisplayNumberListsTests
             NumberList expected = new NumberList { 4, 6, 8, 10 };
 
             //--Act
-            NumberList actual = ArithmaticListGenerator.ListEvenNumbers(startNumber, endNumber);
+            NumberList actual = ListGenerator.ListEvenNumbers(startNumber, endNumber);
 
             //--Assert
             CollectionAssert.AreEquivalent(expected, actual);
@@ -30,7 +30,7 @@ namespace DisplayNumberListsTests
             NumberList expected = new NumberList { 4, 6, 8, 10 };
 
             //--Act
-            NumberList actual = ArithmaticListGenerator.ListEvenNumbers(startNumber, endNumber);
+            NumberList actual = ListGenerator.ListEvenNumbers(startNumber, endNumber);
 
             //--Assert
             CollectionAssert.AreEquivalent(expected, actual);
@@ -45,7 +45,7 @@ namespace DisplayNumberListsTests
             NumberList expected = new NumberList { 5, 7, 9 };
 
             //--Act
-            NumberList actual = ArithmaticListGenerator.ListOddNumbers(startNumber, endNumber);
+            NumberList actual = ListGenerator.ListOddNumbers(startNumber, endNumber);
 
             //--Assert
             CollectionAssert.AreEquivalent(expected, actual);
@@ -60,7 +60,7 @@ namespace DisplayNumberListsTests
             NumberList expected = new NumberList { 5, 7, 9};
 
             //--Act
-            NumberList actual = ArithmaticListGenerator.ListOddNumbers(startNumber, endNumber);
+            NumberList actual = ListGenerator.ListOddNumbers(startNumber, endNumber);
 
             //--Assert
             CollectionAssert.AreEquivalent(expected, actual);

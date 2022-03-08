@@ -33,11 +33,11 @@ namespace NumberLists
             switch (CurrentMenuChoice)
             {
                 case "1":
-                    NumberList allFactorsList = FactorListGenerator.GetFactorsList(_numberToFactor);
+                    NumberList allFactorsList = ListGenerator.GetFactorsList(_numberToFactor);
                     allFactorsList.WriteListWithSpacesAndNewLine();
                     break;
                 case "2":
-                    NumberList primeFactorsList = FactorListGenerator.GetPrimeFactorsList(_numberToFactor);
+                    NumberList primeFactorsList = ListGenerator.GetPrimeFactorsList(_numberToFactor);
                     primeFactorsList.WriteListWithSpacesAndNewLine();
                     break;
                 default:

@@ -6,6 +6,7 @@ namespace NumberLists
     {
         protected string _currentMenuChoice = "0";
         protected string _exit = "to Main Menu";
+        protected string _menuTitle;
 
         public NumberListMenuBase()
         {
@@ -24,10 +25,16 @@ namespace NumberLists
             set { _exit = value; }
         }
 
+        public string MenuTitle 
+        {
+            get { return _menuTitle; }
+            set { _menuTitle = value; }
+        }
+
 
         public string GetMenuChoice(string promptText)
         {
-            return CodeLouisvilleAppBase.Prompt4MenuItem(promptText, this);
+            return CodeLouisvilleAppBase.Prompt4MenuItem($"\n{_menuTitle}\n{promptText}", this);
         }
 
     }
