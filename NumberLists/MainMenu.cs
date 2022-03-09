@@ -3,7 +3,7 @@ using System;
 
 namespace NumberLists
 {
-    class NumberListMainMenu : NumberListMenuBase
+    class MainMenu : NumberListMenuBase
     {
         private new string _exit = "the Number List application";
 
@@ -13,7 +13,7 @@ namespace NumberLists
             set { _exit = value; }
         }
 
-        public NumberListMainMenu()
+        public MainMenu()
         {
             Console.WriteLine("This app displays lists of numbers. Press any key to continue.");
             Console.ReadKey();

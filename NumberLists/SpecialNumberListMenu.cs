@@ -13,7 +13,7 @@ namespace NumberLists
 
         public SpecialNumberListMenu()
         {
-            //set min and max numbers
+            //get number of terms for the list
             _termsInList = CodeLouisvilleAppBase.Prompt4Integer("How many numbers would you like in your list?\n");
            
             //build menu with user number choices
