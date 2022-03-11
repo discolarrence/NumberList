@@ -29,28 +29,27 @@ namespace NumberLists
             AddMenuItem("2", $"List the first {_termsInList} numbers multiplied by {_multiplier}, starting with X");
             AddMenuItem("X", $"Exit {_exit}");
         }
-        public string GetMenuChoice()
-        {
-            return CodeLouisvilleAppBase.Prompt4MenuItem("Choose a type of geometric sequence to display.", this);
-        }
-
+        
         public void ExecuteSpecialNumberListMenuChoice()
         {
             while (CurrentMenuChoice != "X")
             {
-                CurrentMenuChoice = GetMenuChoice();
+                CurrentMenuChoice = GetMenuChoice("Choose a type of geometric sequence to display.");
 
                 switch (CurrentMenuChoice)
                 {
                     case "1":
-                        NumberList exponentialList = ListGenerator.ExponentialList(_termsInList, _multiplier);
+                        NumberList exponentialList = ListGenerators.ExponentialList(_termsInList, _multiplier);
                         exponentialList.WriteListWithSpacesAndNewLine();
                         break;
                     case "2":
                         
                         break;
-                   
+                    case "X":
+                        CurrentMenuChoice = "X";
+                        break;
                     default:
+                        CurrentMenuChoice = "0";
                         break;
                 }
             }

@@ -4,7 +4,7 @@ using NumberLists;
 namespace DisplayNumberListsTests
 {
     [TestClass]
-    public class ArithmaticListGeneratorTests
+    public class ListGeneratorTests
     {
         [TestMethod]
         public void ListEvenNumbersStartNumberIsEven()
@@ -15,7 +15,7 @@ namespace DisplayNumberListsTests
             NumberList expected = new NumberList { 4, 6, 8, 10 };
 
             //--Act
-            NumberList actual = ListGenerator.ListEvenNumbers(startNumber, endNumber);
+            NumberList actual = ListGenerators.ListEvenNumbers(startNumber, endNumber);
 
             //--Assert
             CollectionAssert.AreEquivalent(expected, actual);
@@ -30,7 +30,7 @@ namespace DisplayNumberListsTests
             NumberList expected = new NumberList { 4, 6, 8, 10 };
 
             //--Act
-            NumberList actual = ListGenerator.ListEvenNumbers(startNumber, endNumber);
+            NumberList actual = ListGenerators.ListEvenNumbers(startNumber, endNumber);
 
             //--Assert
             CollectionAssert.AreEquivalent(expected, actual);
@@ -45,7 +45,7 @@ namespace DisplayNumberListsTests
             NumberList expected = new NumberList { 5, 7, 9 };
 
             //--Act
-            NumberList actual = ListGenerator.ListOddNumbers(startNumber, endNumber);
+            NumberList actual = ListGenerators.ListOddNumbers(startNumber, endNumber);
 
             //--Assert
             CollectionAssert.AreEquivalent(expected, actual);
@@ -60,7 +60,7 @@ namespace DisplayNumberListsTests
             NumberList expected = new NumberList { 5, 7, 9};
 
             //--Act
-            NumberList actual = ListGenerator.ListOddNumbers(startNumber, endNumber);
+            NumberList actual = ListGenerators.ListOddNumbers(startNumber, endNumber);
 
             //--Assert
             CollectionAssert.AreEquivalent(expected, actual);

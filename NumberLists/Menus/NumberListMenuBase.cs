@@ -7,11 +7,6 @@ namespace NumberLists
         protected string _currentMenuChoice = "0";
         protected string _exit = "to Main Menu";
         protected string _menuTitle;
-
-        public NumberListMenuBase()
-        {
-            
-        }
        
         public string CurrentMenuChoice
         {

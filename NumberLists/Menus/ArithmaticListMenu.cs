@@ -36,34 +36,32 @@ namespace NumberLists
             set { _maxNumber = value; }
         }
 
-
-        public string GetMenuChoice()
-        {
-            return CodeLouisvilleAppBase.Prompt4MenuItem("Choose a type of arithmatic list to display.", this);
-        }
-
         public void ExecuteArithmaticMenuChoice()
         {
             while (CurrentMenuChoice.ToUpper() != "X")
             {
-                CurrentMenuChoice = GetMenuChoice();
+                CurrentMenuChoice = GetMenuChoice("Choose a type of arithmatic sequence to display.");
 
                 switch (CurrentMenuChoice)
                 {
                     case "1":
-                        NumberList evenNumberList = ListGenerator.ListEvenNumbers(MinNumber, MaxNumber);
+                        NumberList evenNumberList = ListGenerators.ListEvenNumbers(MinNumber, MaxNumber);
                         evenNumberList.WriteListWithSpacesAndNewLine();
                         break;
                     case "2":
-                        NumberList oddNumberList = ListGenerator.ListOddNumbers(MinNumber, MaxNumber);
+                        NumberList oddNumberList = ListGenerators.ListOddNumbers(MinNumber, MaxNumber);
                         oddNumberList.WriteListWithSpacesAndNewLine();
                         break;
                     case "3":
                         int divisor = CodeLouisvilleAppBase.Prompt4Integer("What number would you like to list multiples of?\n");
-                        NumberList multiplesList = ListGenerator.ListMultiples(MinNumber, MaxNumber, divisor);
+                        NumberList multiplesList = ListGenerators.ListMultiples(MinNumber, MaxNumber, divisor);
                         multiplesList.WriteListWithSpacesAndNewLine();
                         break;
+                    case "X":
+                        CurrentMenuChoice = "X";
+                        break;
                     default:
+                        CurrentMenuChoice = "0";
                         break;
                 }
             }

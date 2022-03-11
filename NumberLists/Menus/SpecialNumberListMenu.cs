@@ -1,9 +1,4 @@
 ﻿using CodeLouisvilleLibrary;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NumberLists
 {
@@ -29,33 +24,31 @@ namespace NumberLists
             set { _termsInList = value; }
         }
 
-
-        public string GetMenuChoice()
-        {
-            return CodeLouisvilleAppBase.Prompt4MenuItem("Choose a type of special number list to display.", this);
-        }
-
         public void ExecuteSpecialNumberListMenuChoice()
         {
             while (CurrentMenuChoice != "X")
             {
-                CurrentMenuChoice = GetMenuChoice();
+                CurrentMenuChoice = GetMenuChoice("Choose a type of special number list to display.");
 
                 switch (CurrentMenuChoice)
                 {
                     case "1":
-                        NumberList primeNumberList = ListGenerator.ListPrimeNumbers(_termsInList);
+                        NumberList primeNumberList = ListGenerators.ListPrimeNumbers(_termsInList);
                         primeNumberList.WriteListWithSpacesAndNewLine();
                         break;
                     case "2":
-                        NumberList triangleNumberList = ListGenerator.ListTriangleNumbers(_termsInList);
+                        NumberList triangleNumberList = ListGenerators.ListTriangleNumbers(_termsInList);
                         triangleNumberList.WriteListWithSpacesAndNewLine();
                         break;
                     case "3":
-                        NumberList fibonacciNumberList = ListGenerator.ListFibonacciNumbers(_termsInList);
+                        NumberList fibonacciNumberList = ListGenerators.ListFibonacciNumbers(_termsInList);
                         fibonacciNumberList.WriteListWithSpacesAndNewLine();
                         break;
+                    case "X":
+                        CurrentMenuChoice = "X";
+                        break;
                     default:
+                        CurrentMenuChoice = "0";
                         break;
                 }
             }

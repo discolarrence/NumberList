@@ -1,6 +1,6 @@
 ﻿namespace NumberLists
 {
-    public static class ListGenerator
+    public static class ListGenerators
     {
         public static NumberList ListEvenNumbers(int startNumber, int endNumber)
         {

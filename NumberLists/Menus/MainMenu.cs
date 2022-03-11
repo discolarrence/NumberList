@@ -26,16 +26,11 @@ namespace NumberLists
             AddMenuItem("X", $"Exit {_exit}");
         }
 
-        public string GetMenuChoice()
-        {
-            return CodeLouisvilleAppBase.Prompt4MenuItem("Choose a type of list to display.", this);
-        }
-
         public void ExecuteMainMenuChoice()
         {
             while (CurrentMenuChoice.ToUpper() != "X")
             {
-                CurrentMenuChoice = GetMenuChoice();
+                CurrentMenuChoice = GetMenuChoice("***Number List Main Menu***\nChoose a type of list to display.");
 
                 switch (CurrentMenuChoice)
                 {
@@ -54,7 +49,11 @@ namespace NumberLists
                         SpecialNumberListMenu specialNumberListMenu = new SpecialNumberListMenu();
                         specialNumberListMenu.ExecuteSpecialNumberListMenuChoice();
                         break;
+                    case "X":
+                        CurrentMenuChoice = "X";
+                        break;
                     default:
+                        CurrentMenuChoice = "0";
                         break;
                 }
             }

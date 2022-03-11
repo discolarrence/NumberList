@@ -1,7 +1,4 @@
-﻿using CodeLouisvilleLibrary;
-using System;
-
-namespace NumberLists
+﻿namespace NumberLists
 {
     class Program
     {
@@ -10,9 +7,5 @@ namespace NumberLists
             MainMenu mainMenu = new MainMenu();
             mainMenu.ExecuteMainMenuChoice();
         }
-       
-
     }
-
-    
 }
