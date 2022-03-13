@@ -1,39 +1,30 @@
-﻿using CodeLouisvilleLibrary;
-
-namespace NumberLists
+﻿namespace NumberLists
 {
     class FactorListMenu : NumberListMenuBase
     {
-        private int _numberToFactor;
-
         public FactorListMenu()
         {
-            _numberToFactor = CodeLouisvilleAppBase.Prompt4Integer("What number would you like to factor?");
-
-            AddMenuItem("1", $"List all factors of {_numberToFactor}");
-            AddMenuItem("2", $"List prime factors of {_numberToFactor}");
+            AddMenuItem("1", $"List factors");
+            AddMenuItem("2", $"List prime factors");
             AddMenuItem("X", $"Exit {_exit}");
-        }
-
-        public int NumberToFactor
-        {
-            get { return _numberToFactor; }
-            set { _numberToFactor = value; }
         }
 
         public void ExecuteFactorListMenuChoice()
         {
-            while(CurrentMenuChoice.ToUpper() == "X")
+            while(CurrentMenuChoice.ToUpper() != "X")
             {
-                CurrentMenuChoice = GetMenuChoice("Choose a factor number list to display.");
+                CurrentMenuChoice = GetMenuChoice("Factor Lists Menu");
+
                 switch (CurrentMenuChoice)
                 {
                     case "1":
-                        NumberList allFactorsList = ListGenerators.GetFactorsList(_numberToFactor);
+                        NumberToFactor = GetNumberToFactor();
+                        NumberList allFactorsList = ListGenerators.GetFactorsList(NumberToFactor);
                         allFactorsList.WriteListWithSpacesAndNewLine();
                         break;
                     case "2":
-                        NumberList primeFactorsList = ListGenerators.GetPrimeFactorsList(_numberToFactor);
+                        NumberToFactor = GetNumberToFactor();
+                        NumberList primeFactorsList = ListGenerators.GetPrimeFactorsList(NumberToFactor);
                         primeFactorsList.WriteListWithSpacesAndNewLine();
                         break;
                     case "X":
@@ -43,8 +34,7 @@ namespace NumberLists
                         CurrentMenuChoice = "0";
                         break;
                 }
-            }
-            
+            }   
         }
     }
 }

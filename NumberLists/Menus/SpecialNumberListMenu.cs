@@ -1,47 +1,36 @@
-﻿using CodeLouisvilleLibrary;
-
-namespace NumberLists
+﻿namespace NumberLists
 {
     class SpecialNumberListMenu : NumberListMenuBase
     {
-        private int _termsInList;
-
         public SpecialNumberListMenu()
         {
-            //get number of terms for the list
-            _termsInList = CodeLouisvilleAppBase.Prompt4Integer("How many numbers would you like in your list?\n");
-           
-            //build menu with user number choices
-            AddMenuItem("1", $"List the first {_termsInList} prime numbers");
-            AddMenuItem("2", $"List the first {_termsInList} triangle numbers");
-            AddMenuItem("3", $"List the first {_termsInList} Fibonacci numbers");
+            AddMenuItem("1", $"Prime numbers");
+            AddMenuItem("2", $"Triangle numbers");
+            AddMenuItem("3", $"Fibonacci numbers");
             AddMenuItem("X", $"Exit {_exit}");
-        }
-
-        public int TermsInList
-        {
-            get { return _termsInList; }
-            set { _termsInList = value; }
         }
 
         public void ExecuteSpecialNumberListMenuChoice()
         {
             while (CurrentMenuChoice != "X")
             {
-                CurrentMenuChoice = GetMenuChoice("Choose a type of special number list to display.");
+                CurrentMenuChoice = GetMenuChoice("Special Numbers Menu");
 
                 switch (CurrentMenuChoice)
                 {
                     case "1":
-                        NumberList primeNumberList = ListGenerators.ListPrimeNumbers(_termsInList);
+                        NumberOfTerms = GetTermsInList();
+                        NumberList primeNumberList = ListGenerators.ListPrimeNumbers(NumberOfTerms);
                         primeNumberList.WriteListWithSpacesAndNewLine();
                         break;
                     case "2":
-                        NumberList triangleNumberList = ListGenerators.ListTriangleNumbers(_termsInList);
+                        NumberOfTerms = GetTermsInList();
+                        NumberList triangleNumberList = ListGenerators.ListTriangleNumbers(NumberOfTerms);
                         triangleNumberList.WriteListWithSpacesAndNewLine();
                         break;
                     case "3":
-                        NumberList fibonacciNumberList = ListGenerators.ListFibonacciNumbers(_termsInList);
+                        NumberOfTerms = GetTermsInList();
+                        NumberList fibonacciNumberList = ListGenerators.ListFibonacciNumbers(NumberOfTerms);
                         fibonacciNumberList.WriteListWithSpacesAndNewLine();
                         break;
                     case "X":

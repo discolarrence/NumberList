@@ -1,5 +1,4 @@
-﻿using CodeLouisvilleLibrary;
-using System;
+﻿using System;
 
 namespace NumberLists
 {
@@ -20,7 +19,7 @@ namespace NumberLists
             Console.Clear();
 
             AddMenuItem("1", $"Arithmatic Sequences");
-            AddMenuItem("2", $"Geometric Sequences");
+            AddMenuItem("2", $"Exponential Sequences");
             AddMenuItem("3", $"Factors");
             AddMenuItem("4", $"Special Numbers");
             AddMenuItem("X", $"Exit {_exit}");
@@ -30,7 +29,7 @@ namespace NumberLists
         {
             while (CurrentMenuChoice.ToUpper() != "X")
             {
-                CurrentMenuChoice = GetMenuChoice("***Number List Main Menu***\nChoose a type of list to display.");
+                CurrentMenuChoice = GetMenuChoice("Number List Main Menu");
 
                 switch (CurrentMenuChoice)
                 {
@@ -39,7 +38,8 @@ namespace NumberLists
                         arithmaticListMenu.ExecuteArithmaticMenuChoice();
                         break;
                     case "2":
-                        Console.WriteLine("geometric list menu coming");
+                        ExponentialListMenu exponentialListMenu = new ExponentialListMenu();
+                        exponentialListMenu.ExecuteExponentialNumberListMenuChoice();
                         break;
                     case "3":
                         FactorListMenu factorListMenu = new FactorListMenu();
