@@ -61,6 +61,16 @@ namespace NumberLists
             set { _numberToFactor = value; }
         }
 
+        public int Prompt4PositiveInteger(string prompt)
+        {
+            int positiveInt = CodeLouisvilleAppBase.Prompt4Integer(prompt);
+            if (positiveInt < 0)
+            {
+                Prompt4PositiveInteger(prompt);
+            }
+            return positiveInt;
+        }
+
         public string GetMenuChoice(string menuTitle)
         {
             return CodeLouisvilleAppBase.Prompt4MenuItem($"\n***{menuTitle}***\nChoose a list to display.", this);
@@ -68,37 +78,34 @@ namespace NumberLists
 
         public int GetDivisor()
         {
-            return CodeLouisvilleAppBase.Prompt4Integer("What number would you like to list multiples of?\n");
+            return Prompt4PositiveInteger("What number would you like to list multiples of?\n");
         }
 
         public int GetMultiplier()
         {
-            return CodeLouisvilleAppBase.Prompt4Integer("What number would you like to multiply by?\n");
+            return Prompt4PositiveInteger("What number would you like to multiply by?\n");
         }
 
         public int GetNumberToFactor()
         {
-            return CodeLouisvilleAppBase.Prompt4Integer("What number would you like to factor?\n");
+            return Prompt4PositiveInteger("What number would you like to factor?\n");
         }
 
         public int GetMinimum()
         {
-            return CodeLouisvilleAppBase.Prompt4Integer("What is the minimum number for the number list?\n");
+            return Prompt4PositiveInteger("What is the minimum number for the number list?\n");
         }
 
         public int GetMaximum(int minimum)
         {
-            int maximum = 0;
-            while (maximum < minimum)
-            {
-                maximum = CodeLouisvilleAppBase.Prompt4Integer("What is the maximum number for the number list?\n");
-            }
+            int maximum = Prompt4PositiveInteger("What is the maximum number for the number list?\n");
+            if (minimum >= maximum) GetMaximum(minimum);
             return maximum;
         }
 
         public int GetTermsInList()
         {
-            return CodeLouisvilleAppBase.Prompt4Integer("How many numbers would you like in the list?\n");
+            return Prompt4PositiveInteger("How many numbers would you like in the list?\n");
         }
     }
 }
