@@ -33,5 +33,33 @@ namespace NumberListsTests
             //--Assert
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void IsPrimeNumberOne()
+        {
+            //--Arrange
+            int numberToTest = 1;
+            bool expected = false;
+
+            //--Act
+            bool actual = ListGenerators.IsPrimeNumber(numberToTest);
+
+            //--Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void IsPrimeNumberZero()
+        {
+            //--Arrange
+            int numberToTest = 0;
+            bool expected = false;
+
+            //--Act
+            bool actual = ListGenerators.IsPrimeNumber(numberToTest);
+
+            //--Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }

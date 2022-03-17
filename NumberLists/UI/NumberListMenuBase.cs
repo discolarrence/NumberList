@@ -1,4 +1,5 @@
 ﻿using CodeLouisvilleLibrary;
+using System;
 
 namespace NumberLists
 {
@@ -106,6 +107,17 @@ namespace NumberLists
         public int GetTermsInList()
         {
             return Prompt4PositiveInteger("How many numbers would you like in the list?\n");
+        }
+
+        public static bool AskToSave()
+        {
+            return CodeLouisvilleAppBase.Prompt4YesNo("Would you like to save your number list? (y/n)\n");
+        }
+
+        public static string GetNickname()
+        {
+            Console.WriteLine("What would you like to name your number list?");
+            return Console.ReadLine();
         }
     }
 }

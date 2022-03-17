@@ -1,14 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CodeLouisvilleLibrary.Serialization;
+﻿using CodeLouisvilleLibrary.Serialization;
+using CodeLouisvilleLibrary;
 
 namespace NumberLists
 {
-    public static class ListSaver
+    public class ListSaver : EntitySerializationService<NumberList>
     {
-      
+        public ListSaver() : base("UserLists.json")
+        {
+
+        }
+
     }
 }

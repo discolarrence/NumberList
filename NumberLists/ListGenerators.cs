@@ -54,6 +54,10 @@
 
         public static bool IsPrimeNumber(int number)
         {
+            if (number <= 1)
+            {
+                return false;
+            }
             for (int i = 2; i < number; i++)
             {
                 if (number % i == 0)
@@ -83,20 +87,22 @@
         {
             NumberList numberList = new NumberList();
 
-            int n1 = 0;
-            int n2 = 1;
+            long n1 = 0;
+            long n2 = 1;
 
             numberList.Add(n1);
             numberList.Add(n2);
 
-            for (int i = 2; i < numberOfTerms; i++)
+            for (long i = 2; i < numberOfTerms && n2 > 0; i++)
             {
-                int nFib = n1 + n2;
-                numberList.Add(nFib);
+                long nFib = n1 + n2;
+                if (nFib > 0)
+                {
+                    numberList.Add(nFib);
+                }
                 n1 = n2;
                 n2 = nFib;
             }
-
             return numberList;
         }
 
