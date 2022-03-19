@@ -23,7 +23,7 @@
                         MaxNumber = GetMaximum(MinNumber);
                         NumberList evenNumberList = NumberListGenerators.ListEvenNumbers(MinNumber, MaxNumber);
                         evenNumberList.WriteListWithSpacesAndNewLine();
-                        NumberList.Save(evenNumberList);
+                        evenNumberList.Save();
                         break;
                     case "2":
                         MinNumber = GetMinimum();

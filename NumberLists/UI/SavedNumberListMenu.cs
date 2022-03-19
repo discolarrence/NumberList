@@ -14,19 +14,13 @@ namespace NumberLists
             AddMenuItem("X", $"Exit { _exit }");
         }
 
-        public static List<NumberListSaver> GetAllNumberLists()
+        public static void DisplayAllNumberLists(IEnumerable<NumberListContainer> savedNumberLists)
         {
-            var json = File.ReadAllText("UserLists.json");
-            return JsonConvert.DeserializeObject<List<NumberListSaver>>(json);
-        }
-
-        public static void DisplayAllNumberLists()
-        {
-            List<NumberListSaver> savedNumberLists = GetAllNumberLists();
-            foreach (NumberListSaver savedNumberList in savedNumberLists)
+            foreach (NumberListContainer savedNumberList in savedNumberLists)
             {
-                Console.WriteLine($"{savedNumberList.Date}: {savedNumberList.Nickname}: {savedNumberList.NumberList}");
-            } 
+                Console.WriteLine($"{savedNumberList.ID}: {savedNumberList.Nickname} {savedNumberList.DateSaved}");
+                savedNumberList.NumberList.WriteListWithSpacesAndNewLine();
+            }
         }
 
         public void ExecuteSavedNumberListMenuChoice()
@@ -38,7 +32,7 @@ namespace NumberLists
                 switch (CurrentMenuChoice)
                 {
                     case "1":
-                        DisplayAllNumberLists();
+                        DisplayAllNumberLists(NumberListContainer.RetrieveNumberLists());
                         break;
                     case "2":
                         Console.WriteLine("choose list by nickname");
