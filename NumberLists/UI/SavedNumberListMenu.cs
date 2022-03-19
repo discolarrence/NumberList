@@ -1,7 +1,5 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.IO;
 
 namespace NumberLists
 {
@@ -10,7 +8,7 @@ namespace NumberLists
         public SavedNumberListMenu()
         {
             AddMenuItem("1", "View all saved lists");
-            AddMenuItem("2", "Choose a list by nickname");
+            AddMenuItem("2", "Choose a list by ID");
             AddMenuItem("X", $"Exit { _exit }");
         }
 
@@ -20,6 +18,33 @@ namespace NumberLists
             {
                 Console.WriteLine($"{savedNumberList.ID}: {savedNumberList.Nickname} {savedNumberList.DateSaved}");
                 savedNumberList.NumberList.WriteListWithSpacesAndNewLine();
+            }
+        }
+
+        public static void DisplayListByID(IEnumerable<NumberListContainer> savedNumberLists)
+        {
+            Console.WriteLine("Enter the ID number of the list you'd like to see.\n");
+            NumberListSerializationService numberListSerializationService = new NumberListSerializationService();
+            foreach (NumberListContainer savedNumberList in savedNumberLists)
+            {
+                Console.WriteLine($"{savedNumberList.ID}: {savedNumberList.Nickname} {savedNumberList.DateSaved}");
+            }
+            string userSelection = Console.ReadLine();
+            if (int.TryParse(userSelection, out int selectedID))
+            {
+                NumberListContainer selectedNumberListContainer = numberListSerializationService.GetByID(selectedID).Result;
+                if (selectedNumberListContainer != null)
+                {
+                    selectedNumberListContainer.NumberList.WriteListWithSpacesAndNewLine();
+                }
+                else
+                {
+                    Console.WriteLine("No list with that ID");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Try again.");
             }
         }
 
@@ -35,7 +60,7 @@ namespace NumberLists
                         DisplayAllNumberLists(NumberListContainer.RetrieveNumberLists());
                         break;
                     case "2":
-                        Console.WriteLine("choose list by nickname");
+                        DisplayListByID(NumberListContainer.RetrieveNumberLists());
                         break;
                     case "X":
                         CurrentMenuChoice = "X";
