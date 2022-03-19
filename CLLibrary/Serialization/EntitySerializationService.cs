@@ -33,7 +33,7 @@ namespace CodeLouisvilleLibrary.Serialization
                 if (item.ID <= 0)
                     item.ID = items.Count > 0 ? items.Max(i => i.ID) + 1 : 1;
                 else
-                    items.RemoveAll(i => i.ID == item.ID);
+                    items.RemoveAll(i => i.ID ==  item.ID);
 
                 items.Add(item);
 

@@ -1,6 +1,6 @@
 ﻿namespace NumberLists
 {
-    public static class ListGenerators
+    public static class NumberListGenerators
     {
         public static NumberList ListEvenNumbers(int startNumber, int endNumber)
         {
@@ -114,7 +114,7 @@
 
             for (int i = 1; i <= numberOfTerms; i++)
             {
-                nTri = nTri + i;
+                nTri += i;
                 numberList.Add(nTri);
             }
 
@@ -144,7 +144,7 @@
                 if (n % i == 0)
                 {
                     numberList.Add(i);
-                    n = n / i;
+                    n /= i;
                     i = 2;
                 }
                 else
@@ -161,7 +161,7 @@
             int x = 1;
             for (int i = 0; i < numberOfTerms; i++)
             {
-                x = x * multiplier;
+                x *= multiplier;
                 numberList.Add(x);
             }
             return numberList;

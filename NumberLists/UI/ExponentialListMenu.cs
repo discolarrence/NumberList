@@ -20,18 +20,18 @@
                 {
                     case "1":
                         NumberOfTerms = GetTermsInList();
-                        NumberList squareList = ListGenerators.ExponentialList(NumberOfTerms, 2);
+                        NumberList squareList = NumberListGenerators.ExponentialList(NumberOfTerms, 2);
                         squareList.WriteListWithSpacesAndNewLine();
                         break;
                     case "2":
                         NumberOfTerms = GetTermsInList();
-                        NumberList cubeList = ListGenerators.ExponentialList(NumberOfTerms, 3);
+                        NumberList cubeList = NumberListGenerators.ExponentialList(NumberOfTerms, 3);
                         cubeList.WriteListWithSpacesAndNewLine();
                         break;
                     case "3":
                         NumberOfTerms = GetTermsInList();
                         Multiplier = GetMultiplier();
-                        NumberList exponentialList = ListGenerators.ExponentialList(NumberOfTerms, Multiplier);
+                        NumberList exponentialList = NumberListGenerators.ExponentialList(NumberOfTerms, Multiplier);
                         exponentialList.WriteListWithSpacesAndNewLine();
                         break;
                     case "X":

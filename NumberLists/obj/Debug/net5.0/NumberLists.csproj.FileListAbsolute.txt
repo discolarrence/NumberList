@@ -17,3 +17,4 @@ C:\Users\disco\Projects\NumberLists\NumberLists\obj\Debug\net5.0\NumberLists.dll
 C:\Users\disco\Projects\NumberLists\NumberLists\obj\Debug\net5.0\ref\NumberLists.dll
 C:\Users\disco\Projects\NumberLists\NumberLists\obj\Debug\net5.0\NumberLists.pdb
 C:\Users\disco\Projects\NumberLists\NumberLists\obj\Debug\net5.0\NumberLists.genruntimeconfig.cache
+C:\Users\disco\Projects\NumberLists\NumberLists\bin\Debug\net5.0\Newtonsoft.Json.dll

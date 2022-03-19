@@ -20,17 +20,17 @@
                 {
                     case "1":
                         NumberOfTerms = GetTermsInList();
-                        NumberList primeNumberList = ListGenerators.ListPrimeNumbers(NumberOfTerms);
+                        NumberList primeNumberList = NumberListGenerators.ListPrimeNumbers(NumberOfTerms);
                         primeNumberList.WriteListWithSpacesAndNewLine();
                         break;
                     case "2":
                         NumberOfTerms = GetTermsInList();
-                        NumberList triangleNumberList = ListGenerators.ListTriangleNumbers(NumberOfTerms);
+                        NumberList triangleNumberList = NumberListGenerators.ListTriangleNumbers(NumberOfTerms);
                         triangleNumberList.WriteListWithSpacesAndNewLine();
                         break;
                     case "3":
                         NumberOfTerms = GetTermsInList();
-                        NumberList fibonacciNumberList = ListGenerators.ListFibonacciNumbers(NumberOfTerms);
+                        NumberList fibonacciNumberList = NumberListGenerators.ListFibonacciNumbers(NumberOfTerms);
                         fibonacciNumberList.WriteListWithSpacesAndNewLine();
                         break;
                     case "X":

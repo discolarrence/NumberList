@@ -22,6 +22,7 @@ namespace NumberLists
             AddMenuItem("2", $"Exponential Sequences");
             AddMenuItem("3", $"Factors");
             AddMenuItem("4", $"Special Numbers");
+            AddMenuItem("5", $"Saved Number Lists");
             AddMenuItem("X", $"Exit {_exit}");
         }
 
@@ -48,6 +49,10 @@ namespace NumberLists
                     case "4":
                         SpecialNumberListMenu specialNumberListMenu = new SpecialNumberListMenu();
                         specialNumberListMenu.ExecuteSpecialNumberListMenuChoice();
+                        break;
+                    case "5":
+                        SavedNumberListMenu savedNumberListMenu = new SavedNumberListMenu();
+                        savedNumberListMenu.ExecuteSavedNumberListMenuChoice();
                         break;
                     case "X":
                         CurrentMenuChoice = "X";

@@ -19,12 +19,12 @@
                 {
                     case "1":
                         NumberToFactor = GetNumberToFactor();
-                        NumberList allFactorsList = ListGenerators.GetFactorsList(NumberToFactor);
+                        NumberList allFactorsList = NumberListGenerators.GetFactorsList(NumberToFactor);
                         allFactorsList.WriteListWithSpacesAndNewLine();
                         break;
                     case "2":
                         NumberToFactor = GetNumberToFactor();
-                        NumberList primeFactorsList = ListGenerators.GetPrimeFactorsList(NumberToFactor);
+                        NumberList primeFactorsList = NumberListGenerators.GetPrimeFactorsList(NumberToFactor);
                         primeFactorsList.WriteListWithSpacesAndNewLine();
                         break;
                     case "X":

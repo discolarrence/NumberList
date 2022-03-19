@@ -21,21 +21,21 @@
                     case "1":
                         MinNumber = GetMinimum();
                         MaxNumber = GetMaximum(MinNumber);
-                        NumberList evenNumberList = ListGenerators.ListEvenNumbers(MinNumber, MaxNumber);
+                        NumberList evenNumberList = NumberListGenerators.ListEvenNumbers(MinNumber, MaxNumber);
                         evenNumberList.WriteListWithSpacesAndNewLine();
                         NumberList.Save(evenNumberList);
                         break;
                     case "2":
                         MinNumber = GetMinimum();
                         MaxNumber = GetMaximum(MinNumber);
-                        NumberList oddNumberList = ListGenerators.ListOddNumbers(MinNumber, MaxNumber);
+                        NumberList oddNumberList = NumberListGenerators.ListOddNumbers(MinNumber, MaxNumber);
                         oddNumberList.WriteListWithSpacesAndNewLine();
                         break;
                     case "3":
                         MinNumber = GetMinimum();
                         MaxNumber = GetMaximum(MinNumber);
                         Divisor = GetDivisor();
-                        NumberList multiplesList = ListGenerators.ListMultiples(MinNumber, MaxNumber, Divisor);
+                        NumberList multiplesList = NumberListGenerators.ListMultiples(MinNumber, MaxNumber, Divisor);
                         multiplesList.WriteListWithSpacesAndNewLine();
                         break;
                     case "X":

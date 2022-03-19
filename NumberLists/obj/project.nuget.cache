@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "sYDV3/DZ9cFoCuGuYQZKv3Mh8Y8xGWCtwITAukejZAzQU/Xpy3e8bEXvrR/w/xuhI0x8EEk0mH7gENaZ1CykPg==",
+  "dgSpecHash": "95RsTtYfZLjl9j0DMhEhVK2prKF/+LvvV0h1c+dqMWhR1QSOMkszfk8HqJumlBNLMxG/iThwgsdBWvIzXXXqUQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\disco\\Projects\\NumberLists\\NumberLists\\NumberLists.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\disco\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

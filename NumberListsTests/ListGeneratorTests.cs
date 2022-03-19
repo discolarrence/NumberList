@@ -15,7 +15,7 @@ namespace DisplayNumberListsTests
             NumberList expected = new NumberList { 4, 6, 8, 10 };
 
             //--Act
-            NumberList actual = ListGenerators.ListEvenNumbers(startNumber, endNumber);
+            NumberList actual = NumberListGenerators.ListEvenNumbers(startNumber, endNumber);
 
             //--Assert
             CollectionAssert.AreEquivalent(expected, actual);
@@ -30,7 +30,7 @@ namespace DisplayNumberListsTests
             NumberList expected = new NumberList { 4, 6, 8, 10 };
 
             //--Act
-            NumberList actual = ListGenerators.ListEvenNumbers(startNumber, endNumber);
+            NumberList actual = NumberListGenerators.ListEvenNumbers(startNumber, endNumber);
 
             //--Assert
             CollectionAssert.AreEquivalent(expected, actual);
@@ -45,7 +45,7 @@ namespace DisplayNumberListsTests
             NumberList expected = new NumberList { 5, 7, 9 };
 
             //--Act
-            NumberList actual = ListGenerators.ListOddNumbers(startNumber, endNumber);
+            NumberList actual = NumberListGenerators.ListOddNumbers(startNumber, endNumber);
 
             //--Assert
             CollectionAssert.AreEquivalent(expected, actual);
@@ -60,7 +60,7 @@ namespace DisplayNumberListsTests
             NumberList expected = new NumberList { 5, 7, 9};
 
             //--Act
-            NumberList actual = ListGenerators.ListOddNumbers(startNumber, endNumber);
+            NumberList actual = NumberListGenerators.ListOddNumbers(startNumber, endNumber);
 
             //--Assert
             CollectionAssert.AreEquivalent(expected, actual);
@@ -76,7 +76,7 @@ namespace DisplayNumberListsTests
             NumberList expected = new NumberList { 4, 6, 8, 10 };
 
             //Act
-            NumberList actual = ListGenerators.ListMultiples(startNumber, endNumber, divisor);
+            NumberList actual = NumberListGenerators.ListMultiples(startNumber, endNumber, divisor);
 
             //Assert
             CollectionAssert.AreEquivalent(expected, actual);
@@ -92,7 +92,7 @@ namespace DisplayNumberListsTests
             NumberList expected = new NumberList { };
 
             //Act
-            NumberList actual = ListGenerators.ListMultiples(startNumber, endNumber, divisor);
+            NumberList actual = NumberListGenerators.ListMultiples(startNumber, endNumber, divisor);
 
             //Assert
             CollectionAssert.AreEquivalent(expected, actual);
@@ -106,7 +106,7 @@ namespace DisplayNumberListsTests
             NumberList expected = new NumberList { 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71 };
 
             //--Act
-            NumberList actual = ListGenerators.ListPrimeNumbers(numberOfTerms);
+            NumberList actual = NumberListGenerators.ListPrimeNumbers(numberOfTerms);
 
             //--Assert
             CollectionAssert.AreEquivalent(expected, actual);
@@ -131,7 +131,7 @@ namespace DisplayNumberListsTests
                 4660046610375530309, 7540113804746346429 };
 
             //--Act
-            NumberList actual = ListGenerators.ListFibonacciNumbers(numberOfTerms);
+            NumberList actual = NumberListGenerators.ListFibonacciNumbers(numberOfTerms);
 
             //--Assert
             CollectionAssert.AreEquivalent(expected, actual);
