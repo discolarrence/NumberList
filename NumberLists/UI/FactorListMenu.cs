@@ -21,11 +21,13 @@
                         NumberToFactor = GetNumberToFactor();
                         NumberList allFactorsList = NumberListGenerators.GetFactorsList(NumberToFactor);
                         allFactorsList.WriteListWithSpacesAndNewLine();
+                        allFactorsList.Save();
                         break;
                     case "2":
                         NumberToFactor = GetNumberToFactor();
                         NumberList primeFactorsList = NumberListGenerators.GetPrimeFactorsList(NumberToFactor);
                         primeFactorsList.WriteListWithSpacesAndNewLine();
+                        primeFactorsList.Save();
                         break;
                     case "X":
                         CurrentMenuChoice = "X";

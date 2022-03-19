@@ -22,17 +22,20 @@
                         NumberOfTerms = GetTermsInList();
                         NumberList squareList = NumberListGenerators.ExponentialList(NumberOfTerms, 2);
                         squareList.WriteListWithSpacesAndNewLine();
+                        squareList.Save();
                         break;
                     case "2":
                         NumberOfTerms = GetTermsInList();
                         NumberList cubeList = NumberListGenerators.ExponentialList(NumberOfTerms, 3);
                         cubeList.WriteListWithSpacesAndNewLine();
+                        cubeList.Save();
                         break;
                     case "3":
                         NumberOfTerms = GetTermsInList();
                         Multiplier = GetMultiplier();
                         NumberList exponentialList = NumberListGenerators.ExponentialList(NumberOfTerms, Multiplier);
                         exponentialList.WriteListWithSpacesAndNewLine();
+                        exponentialList.Save();
                         break;
                     case "X":
                         CurrentMenuChoice = "X";

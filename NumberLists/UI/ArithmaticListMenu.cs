@@ -30,6 +30,7 @@
                         MaxNumber = GetMaximum(MinNumber);
                         NumberList oddNumberList = NumberListGenerators.ListOddNumbers(MinNumber, MaxNumber);
                         oddNumberList.WriteListWithSpacesAndNewLine();
+                        oddNumberList.Save();
                         break;
                     case "3":
                         MinNumber = GetMinimum();
@@ -37,6 +38,7 @@
                         Divisor = GetDivisor();
                         NumberList multiplesList = NumberListGenerators.ListMultiples(MinNumber, MaxNumber, Divisor);
                         multiplesList.WriteListWithSpacesAndNewLine();
+                        multiplesList.Save();
                         break;
                     case "X":
                         CurrentMenuChoice = "X";

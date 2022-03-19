@@ -16,19 +16,24 @@ namespace NumberLists
         {
             foreach (NumberListContainer savedNumberList in savedNumberLists)
             {
-                Console.WriteLine($"{savedNumberList.ID}: {savedNumberList.Nickname} {savedNumberList.DateSaved}");
+                Console.WriteLine($"{savedNumberList.ID}:{savedNumberList.Nickname} Saved:{savedNumberList.DateSaved}");
                 savedNumberList.NumberList.WriteListWithSpacesAndNewLine();
+            }
+        }
+
+        public static void DisplayAllNumberListInformation(IEnumerable<NumberListContainer> savedNumberLists)
+        {
+            foreach (NumberListContainer savedNumberList in savedNumberLists)
+            {
+                Console.WriteLine($"{savedNumberList.ID}:{savedNumberList.Nickname} Saved:{savedNumberList.DateSaved}");
             }
         }
 
         public static void DisplayListByID(IEnumerable<NumberListContainer> savedNumberLists)
         {
+            DisplayAllNumberListInformation(savedNumberLists);
             Console.WriteLine("Enter the ID number of the list you'd like to see.\n");
             NumberListSerializationService numberListSerializationService = new NumberListSerializationService();
-            foreach (NumberListContainer savedNumberList in savedNumberLists)
-            {
-                Console.WriteLine($"{savedNumberList.ID}: {savedNumberList.Nickname} {savedNumberList.DateSaved}");
-            }
             string userSelection = Console.ReadLine();
             if (int.TryParse(userSelection, out int selectedID))
             {

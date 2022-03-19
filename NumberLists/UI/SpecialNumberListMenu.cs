@@ -22,16 +22,19 @@
                         NumberOfTerms = GetTermsInList();
                         NumberList primeNumberList = NumberListGenerators.ListPrimeNumbers(NumberOfTerms);
                         primeNumberList.WriteListWithSpacesAndNewLine();
+                        primeNumberList.Save();
                         break;
                     case "2":
                         NumberOfTerms = GetTermsInList();
                         NumberList triangleNumberList = NumberListGenerators.ListTriangleNumbers(NumberOfTerms);
                         triangleNumberList.WriteListWithSpacesAndNewLine();
+                        triangleNumberList.Save();
                         break;
                     case "3":
                         NumberOfTerms = GetTermsInList();
                         NumberList fibonacciNumberList = NumberListGenerators.ListFibonacciNumbers(NumberOfTerms);
                         fibonacciNumberList.WriteListWithSpacesAndNewLine();
+                        fibonacciNumberList.Save();
                         break;
                     case "X":
                         CurrentMenuChoice = "X";
