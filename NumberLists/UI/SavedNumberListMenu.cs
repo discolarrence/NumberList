@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace NumberLists
+namespace NumberLists.UI
 {
     class SavedNumberListMenu : NumberListMenuBase
     {

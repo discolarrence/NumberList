@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NumberLists", "NumberLists\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CLLibrary", "CLLibrary\CLLibrary.csproj", "{7B5E642A-0AE5-492E-94B0-AD3A84B32DF7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberListsTests", "NumberListsTests\NumberListsTests.csproj", "{8342DC81-CA4F-49BB-A4B4-0158484E5F8A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NumberListsTests", "NumberListsTests\NumberListsTests.csproj", "{8342DC81-CA4F-49BB-A4B4-0158484E5F8A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

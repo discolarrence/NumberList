@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NumberLists
+namespace NumberLists.UI
 {
     class MainMenu : NumberListMenuBase
     {
@@ -14,15 +14,17 @@ namespace NumberLists
 
         public MainMenu()
         {
-            Console.WriteLine("This app displays lists of numbers. Press any key to continue.");
+            Console.WriteLine("Welcome to Number Lists! You can generate, save, and display different kinds of number sequences and learn fun number facts.\n" +
+                "Press any key to continue.");
             Console.ReadKey();
             Console.Clear();
 
             AddMenuItem("1", $"Arithmatic Sequences");
             AddMenuItem("2", $"Exponential Sequences");
-            AddMenuItem("3", $"Factors");
-            AddMenuItem("4", $"Special Numbers");
-            AddMenuItem("5", $"Saved Number Lists");
+            AddMenuItem("3", $"Special Number Sequences");
+            AddMenuItem("4", $"Factors");
+            AddMenuItem("5", $"Number Facts");
+            AddMenuItem("6", $"Saved Number Lists");
             AddMenuItem("X", $"Exit {_exit}");
         }
 
@@ -42,15 +44,19 @@ namespace NumberLists
                         ExponentialListMenu exponentialListMenu = new ExponentialListMenu();
                         exponentialListMenu.ExecuteExponentialNumberListMenuChoice();
                         break;
-                    case "3":
+                    case "4":
                         FactorListMenu factorListMenu = new FactorListMenu();
                         factorListMenu.ExecuteFactorListMenuChoice();
                         break;
-                    case "4":
+                    case "3":
                         SpecialNumberListMenu specialNumberListMenu = new SpecialNumberListMenu();
                         specialNumberListMenu.ExecuteSpecialNumberListMenuChoice();
                         break;
                     case "5":
+                        NumberFactsMenu numberFactsMenu = new NumberFactsMenu();
+                        numberFactsMenu.ExecuteNumberFactsMenuChoice();
+                        break;
+                    case "6":
                         SavedNumberListMenu savedNumberListMenu = new SavedNumberListMenu();
                         savedNumberListMenu.ExecuteSavedNumberListMenuChoice();
                         break;

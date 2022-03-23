@@ -1,4 +1,6 @@
-﻿namespace NumberLists
+﻿using NumberLists.UI;
+
+namespace NumberLists
 {
     class Program
     {

@@ -1,4 +1,4 @@
-﻿namespace NumberLists
+﻿namespace NumberLists.UI
 {
     class ArithmaticListMenu : NumberListMenuBase
     {

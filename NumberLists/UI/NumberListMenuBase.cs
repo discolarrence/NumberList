@@ -1,7 +1,7 @@
 ﻿using CodeLouisvilleLibrary;
 using System;
 
-namespace NumberLists
+namespace NumberLists.UI
 {
     class NumberListMenuBase : Menu<string>
     {
@@ -120,5 +120,14 @@ namespace NumberLists
             return Console.ReadLine();
         }
 
+        public string Get1To9999IntAsString()
+        {
+            int number;
+            do
+            {
+                number = Prompt4PositiveInteger("What number would you like to see a fact about?");
+            } while (number < 1 || number > 9999);
+            return Convert.ToString(number);
+        }
     }
 }
