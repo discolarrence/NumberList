@@ -109,14 +109,14 @@ namespace NumberLists.UI
             return Prompt4PositiveInteger("How many numbers would you like in the list?\n");
         }
 
-        public static bool AskToSave()
+        public static bool AskToSave(string listOrFact)
         {
-            return CodeLouisvilleAppBase.Prompt4YesNo("Would you like to save your number list? (y/n)\n");
+            return CodeLouisvilleAppBase.Prompt4YesNo($"Would you like to save your number {listOrFact}? (y/n)\n");
         }
 
-        public static string GetNickname()
+        public static string GetDescription()
         {
-            Console.WriteLine("What would you like to name your number list?");
+            Console.WriteLine($"What would you like to name your number list?");
             return Console.ReadLine();
         }
 

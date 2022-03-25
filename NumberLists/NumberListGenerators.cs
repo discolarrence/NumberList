@@ -1,4 +1,6 @@
-﻿namespace NumberLists
+﻿using System;
+
+namespace NumberLists
 {
     public static class NumberListGenerators
     {
@@ -164,6 +166,14 @@
                 x *= multiplier;
                 numberList.Add(x);
             }
+            return numberList;
+        }
+
+        public static NumberList StringToNumberList(string numberString)
+        {
+            int stringToInt = Convert.ToInt32(numberString);
+            NumberList numberList = new NumberList();
+            numberList.Add(stringToInt);
             return numberList;
         }
     }

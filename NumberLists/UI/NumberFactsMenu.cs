@@ -1,26 +1,16 @@
 ﻿using System;
-using System.Net.Http;
-using System.Threading.Tasks;
 
 namespace NumberLists.UI
 {
     class NumberFactsMenu : NumberListMenuBase
     {
-        private static readonly HttpClient client = new HttpClient();
-
         public NumberFactsMenu()
         {
             AddMenuItem("1", $"Math fact");
             AddMenuItem("2", $"Number trivia");
+            AddMenuItem("3", $"Random math fact");
+            AddMenuItem("4", $"Random number trivia");
             AddMenuItem("X", $"Exit {_exit}");
-        }
-
-        private static async Task GetNumberFact(string number, string type)
-        {
-            string url = "http://numbersapi.com/" + number + "/" + type;
-            var stringTask = client.GetStringAsync(url);
-            var msg = await stringTask;
-            Console.Write(msg);
         }
 
         public void ExecuteNumberFactsMenuChoice()
@@ -33,11 +23,21 @@ namespace NumberLists.UI
                 {
                     case "1":
                         string mathNumber = Get1To9999IntAsString();
-                        GetNumberFact(mathNumber, "math");
+                        string mathFact = NumberFact.GetNumberFact(mathNumber, "math");
+                        Console.WriteLine(mathFact);
+                        NumberFact.Save(mathNumber, mathFact);
                         break;
                     case "2":
                         string triviaNumber = Get1To9999IntAsString();
-                        GetNumberFact(triviaNumber, "trivia");
+                        string triviaFact = NumberFact.GetNumberFact(triviaNumber, "trivia");
+                        Console.WriteLine(triviaFact);
+                        NumberFact.Save(triviaNumber, triviaFact);
+                        break;
+                    case "3":
+                        Console.WriteLine(NumberFact.GetNumberFact("random", "math")); 
+                        break;
+                    case "4":
+                        Console.WriteLine(NumberFact.GetNumberFact("random", "trivia")); 
                         break;
                     case "X":
                         CurrentMenuChoice = "X";

@@ -17,11 +17,11 @@ namespace NumberLists
 
         public bool Save() 
         {
-            bool wantsToSave = NumberListMenuBase.AskToSave();
+            bool wantsToSave = NumberListMenuBase.AskToSave("list");
             if (wantsToSave)
             {
-                NumberListContainer numberListSaver = new NumberListContainer();
-                numberListSaver.Nickname = NumberListMenuBase.GetNickname();
+                SaverContainer numberListSaver = new SaverContainer();
+                numberListSaver.Description = NumberListMenuBase.GetDescription();
                 numberListSaver.NumberList = this;
                 numberListSaver.DateSaved = DateTime.Now;
                 NumberListSerializationService numberListSerializationService = new NumberListSerializationService();

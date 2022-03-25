@@ -9,27 +9,28 @@ namespace NumberLists.UI
         {
             AddMenuItem("1", "View all saved lists");
             AddMenuItem("2", "Choose a list by ID");
+            AddMenuItem("3", "View all saved facts");
             AddMenuItem("X", $"Exit { _exit }");
         }
 
-        public static void DisplayAllNumberLists(IEnumerable<NumberListContainer> savedNumberLists)
+        public static void DisplayAllNumberLists(IEnumerable<SaverContainer> savedNumberLists)
         {
-            foreach (NumberListContainer savedNumberList in savedNumberLists)
+            foreach (SaverContainer savedNumberList in savedNumberLists)
             {
-                Console.WriteLine($"{savedNumberList.ID}:{savedNumberList.Nickname} Saved:{savedNumberList.DateSaved}");
+                Console.WriteLine($"{savedNumberList.ID}:{savedNumberList.Description} Saved:{savedNumberList.DateSaved}");
                 savedNumberList.NumberList.WriteListWithSpacesAndNewLine();
             }
         }
 
-        public static void DisplayAllNumberListInformation(IEnumerable<NumberListContainer> savedNumberLists)
+        public static void DisplayAllNumberListInformation(IEnumerable<SaverContainer> savedNumberLists)
         {
-            foreach (NumberListContainer savedNumberList in savedNumberLists)
+            foreach (SaverContainer savedNumberList in savedNumberLists)
             {
-                Console.WriteLine($"{savedNumberList.ID}:{savedNumberList.Nickname} Saved:{savedNumberList.DateSaved}");
+                Console.WriteLine($"{savedNumberList.ID}:{savedNumberList.Description} Saved:{savedNumberList.DateSaved}");
             }
         }
 
-        public static void DisplayListByID(IEnumerable<NumberListContainer> savedNumberLists)
+        public static void DisplayListByID(IEnumerable<SaverContainer> savedNumberLists)
         {
             DisplayAllNumberListInformation(savedNumberLists);
             Console.WriteLine("Enter the ID number of the list you'd like to see.\n");
@@ -37,7 +38,7 @@ namespace NumberLists.UI
             string userSelection = Console.ReadLine();
             if (int.TryParse(userSelection, out int selectedID))
             {
-                NumberListContainer selectedNumberListContainer = numberListSerializationService.GetByID(selectedID).Result;
+                SaverContainer selectedNumberListContainer = numberListSerializationService.GetByID(selectedID).Result;
                 if (selectedNumberListContainer != null)
                 {
                     selectedNumberListContainer.NumberList.WriteListWithSpacesAndNewLine();
@@ -53,6 +54,7 @@ namespace NumberLists.UI
             }
         }
 
+
         public void ExecuteSavedNumberListMenuChoice()
         {
             while (CurrentMenuChoice.ToUpper() != "X")
@@ -61,11 +63,15 @@ namespace NumberLists.UI
 
                 switch (CurrentMenuChoice)
                 {
+
+
+
+
                     case "1":
-                        DisplayAllNumberLists(NumberListContainer.RetrieveNumberLists());
+                        DisplayAllNumberLists(SaverContainer.RetrieveNumberLists());
                         break;
                     case "2":
-                        DisplayListByID(NumberListContainer.RetrieveNumberLists());
+                        DisplayListByID(SaverContainer.RetrieveNumberLists());
                         break;
                     case "X":
                         CurrentMenuChoice = "X";
