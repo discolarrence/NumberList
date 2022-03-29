@@ -74,7 +74,7 @@ namespace NumberLists
             IEnumerable<SaverContainer> savedNumberFacts = SaverContainer.RetrieveNumberFacts();
             foreach (SaverContainer savedNumberFact in savedNumberFacts)
             {
-                Console.WriteLine($"{savedNumberFact.Description} Saved:{savedNumberFact.DateSaved}");
+                Console.WriteLine($"{savedNumberFact.Description}");
             }
         }
     }
