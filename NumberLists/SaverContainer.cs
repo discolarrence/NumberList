@@ -27,6 +27,56 @@ namespace NumberLists
             NumberFactSerializationService numberFactSerializationService = new NumberFactSerializationService();
             return numberFactSerializationService.GetAllAsync().Result;
         }
+
+
+        public static void DisplayAllNumberLists()
+        {
+            IEnumerable<SaverContainer> savedNumberLists = RetrieveNumberLists();
+            foreach (SaverContainer savedNumberList in savedNumberLists)
+            {
+                Console.WriteLine($"{savedNumberList.ID}:{savedNumberList.Description} Saved:{savedNumberList.DateSaved}");
+                savedNumberList.NumberList.WriteListWithSpacesAndNewLine();
+            }
+        }
+
+        public static void DisplayAllNumberListInformation()
+        {
+            IEnumerable<SaverContainer> savedNumberLists = RetrieveNumberLists();
+            foreach (SaverContainer savedNumberList in savedNumberLists)
+            {
+                Console.WriteLine($"{savedNumberList.ID}:{savedNumberList.Description} Saved:{savedNumberList.DateSaved}");
+            }
+        }
+
+        public static void DisplayListByID(string userSelection)
+        {
+            NumberListSerializationService numberListSerializationService = new NumberListSerializationService();
+            if (int.TryParse(userSelection, out int selectedID))
+            {
+                SaverContainer selectedNumberListContainer = numberListSerializationService.GetByID(selectedID).Result;
+                if (selectedNumberListContainer != null)
+                {
+                    selectedNumberListContainer.NumberList.WriteListWithSpacesAndNewLine();
+                }
+                else
+                {
+                    Console.WriteLine("No list with that ID");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Try again.");
+            }
+        }
+
+        public static void DisplayAllNumberFacts()
+        {
+            IEnumerable<SaverContainer> savedNumberFacts = SaverContainer.RetrieveNumberFacts();
+            foreach (SaverContainer savedNumberFact in savedNumberFacts)
+            {
+                Console.WriteLine($"{savedNumberFact.Description} Saved:{savedNumberFact.DateSaved}");
+            }
+        }
     }
 
 

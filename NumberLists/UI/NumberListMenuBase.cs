@@ -129,5 +129,11 @@ namespace NumberLists.UI
             } while (number < 1 || number > 9999);
             return Convert.ToString(number);
         }
+
+        public static string GetListID()
+        {
+            Console.WriteLine("Enter the ID number of the list you'd like to see.\n");
+            return Console.ReadLine();
+        }
     }
 }

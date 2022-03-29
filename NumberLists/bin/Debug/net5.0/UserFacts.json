@@ -1,0 +1,18 @@
+[
+  {
+    "ID": 1,
+    "Description": "78 is a triangular number, and its factorization makes it a sphenic number.",
+    "NumberList": [
+      78
+    ],
+    "DateSaved": "2022-03-29T14:39:34.9662823-04:00"
+  },
+  {
+    "ID": 2,
+    "Description": "95 is the percentage confidence interval that is considered satisfactory for most purposes in statistics.",
+    "NumberList": [
+      95
+    ],
+    "DateSaved": "2022-03-29T14:40:14.1314679-04:00"
+  }
+]
