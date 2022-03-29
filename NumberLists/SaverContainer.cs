@@ -21,6 +21,12 @@ namespace NumberLists
             NumberListSerializationService numberListSerializationService = new NumberListSerializationService();
             return numberListSerializationService.GetAllAsync().Result;
         }
+
+        public static IEnumerable<SaverContainer> RetrieveNumberFacts()
+        {
+            NumberFactSerializationService numberFactSerializationService = new NumberFactSerializationService();
+            return numberFactSerializationService.GetAllAsync().Result;
+        }
     }
 
 

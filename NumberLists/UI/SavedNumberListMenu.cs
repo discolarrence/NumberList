@@ -54,6 +54,13 @@ namespace NumberLists.UI
             }
         }
 
+        public static void DisplayAllNumberFacts(IEnumerable<SaverContainer> savedNumberFacts)
+        {
+            foreach (SaverContainer savedNumberFact in savedNumberFacts)
+            {
+                Console.WriteLine($"{savedNumberFact.Description} Saved:{savedNumberFact.DateSaved}");
+            }
+        }
 
         public void ExecuteSavedNumberListMenuChoice()
         {
@@ -63,15 +70,14 @@ namespace NumberLists.UI
 
                 switch (CurrentMenuChoice)
                 {
-
-
-
-
                     case "1":
                         DisplayAllNumberLists(SaverContainer.RetrieveNumberLists());
                         break;
                     case "2":
                         DisplayListByID(SaverContainer.RetrieveNumberLists());
+                        break;
+                    case "3":
+                        DisplayAllNumberFacts(SaverContainer.RetrieveNumberFacts());
                         break;
                     case "X":
                         CurrentMenuChoice = "X";
