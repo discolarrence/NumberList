@@ -16,7 +16,10 @@ namespace NumberLists
 
             while (i <= endNumber)
             {
-                numberList.Add(i);
+                if (Positive(i))
+                {
+                    numberList.Add(i);
+                }
                 i += 2;
             }
 
@@ -35,7 +38,10 @@ namespace NumberLists
           
             while (i <= endNumber)
             {
-                numberList.Add(i);
+                if (Positive(i))
+                {
+                    numberList.Add(i);
+                }
                 i += 2;
             }
             return numberList;
@@ -46,7 +52,7 @@ namespace NumberLists
             NumberList numberList = new NumberList();
             for (int i = startNumber; i <= endNumber; i++)
             {
-                if (i % divisor == 0)
+                if (i % divisor == 0 && Positive(i))
                 {
                     numberList.Add(i);
                 }
@@ -76,7 +82,7 @@ namespace NumberLists
             int i = 1;
             while (numberList.Count < numberOfTerms)
             {
-                if (IsPrimeNumber(i))
+                if (IsPrimeNumber(i) && Positive(i))
                 {
                     numberList.Add(i);
                 }
@@ -117,7 +123,10 @@ namespace NumberLists
             for (int i = 1; i <= numberOfTerms; i++)
             {
                 nTri += i;
-                numberList.Add(nTri);
+                if (Positive(nTri))
+                {
+                    numberList.Add(nTri);
+                }
             }
 
             return numberList;
@@ -164,7 +173,10 @@ namespace NumberLists
             for (int i = 0; i < numberOfTerms; i++)
             {
                 x *= baseNumber;
-                numberList.Add(x);
+                if (Positive(x))
+                {
+                    numberList.Add(x);
+                }
             }
             return numberList;
         }
@@ -176,7 +188,10 @@ namespace NumberLists
             for (int i = 1; i <= numberOfTerms; i++)
             {
                 x = (int)Math.Pow(Convert.ToDouble(i), Convert.ToDouble(exponent));
-                numberList.Add(x);
+                if (Positive(x))
+                {
+                    numberList.Add(x);
+                }
             }
             return numberList;
         }
@@ -187,6 +202,17 @@ namespace NumberLists
             numberList.Add(stringToInt);
             return numberList;
         }
+
+        public static bool Positive(int number)
+        {
+            if (number > 0)
+            {
+                return true;
+            }
+            else return false;
+        }
+
+
     }
 }
 

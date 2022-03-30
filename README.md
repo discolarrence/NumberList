@@ -41,8 +41,8 @@ Number Lists is a console app for users to learn about numbers and their relatio
   <summary><h4>Number Facts</h4></summary>
   <p><strong>Math fact:</strong> Displays a math fact about a user-defined number</p>
   <p><strong>Number trivia:</strong> Displays trivia about a user-defined number</p>
-  <p><strong>Random math fact:</strong> Displays a math fact about a user-defined number</p>
-  <p><strong>Random number trivia:</strong> Displays trivia about a user-defined number</p>
+  <p><strong>Random math fact:</strong> Displays a math fact about a random number</p>
+  <p><strong>Random number trivia:</strong> Displays trivia about a random number</p>
   <p><strong>Exit:</strong> Returns to main menu</p>
 </details>
 
@@ -61,8 +61,9 @@ Number Lists is a console app for users to learn about numbers and their relatio
 * If the same question repeats, you have made an invalid selection.
     * Menu selection prompts only accept the number of a valid menu item or "X" to exit
     * Yes/no prompts only accept "y" or "n"
-    * Number prompts only accept integers between 1 and 9,223,372,036,854,775,807
-* If the number list generator calculates a value greater than 9,223,372,036,854,775,807, the generator will stop and the number list will be displayed
+    * Number fact prompts only accept integers between 1 and 9999
+    * All other umber prompts only accept integers between 1 and 2,147,483,647
+* If the number list generator calculates a value greater than 9,223,372,036,854,775,807 the generator will stop and the number list will be displayed as is
 
 ## Project Requirements
 This app meets all the requirements for the Code Louisville Software Development I course, including the following features:
