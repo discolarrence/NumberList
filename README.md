@@ -63,7 +63,7 @@ Number Lists is a console app for users to learn about numbers and their relatio
     * Yes/no prompts only accept "y" or "n"
     * Number fact prompts only accept integers between 1 and 9999
     * All other umber prompts only accept integers between 1 and 2,147,483,647
-* If the number list generator calculates a value greater than 9,223,372,036,854,775,807 the generator will stop and the number list will be displayed as is
+* If the number list generator calculates a value greater than 2,147,483,647 (9,223,372,036,854,775,807 for Fibonacci) the generator will stop and the number list will be displayed as is
 
 ## Project Requirements
 This app meets all the requirements for the Code Louisville Software Development I course, including the following features:
