@@ -57,7 +57,7 @@ Number Lists is a console app for users to learn about numbers and their relatio
 #### Exit Number List Program
 
 ## Usage
-* On running the app, follow user prompts to generate, view, save and retrieve number lists & facts. 
+* On running the application in .NET 5, follow user prompts to generate, view, save and retrieve number lists & facts. 
 * If the same question repeats, you have made an invalid selection.
     * Menu selection prompts only accept the number of a valid menu item or "X" to exit
     * Yes/no prompts only accept "y" or "n"
