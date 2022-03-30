@@ -157,18 +157,29 @@ namespace NumberLists
             return numberList;
         }
 
-        public static NumberList ExponentialList(int numberOfTerms, int multiplier)
+        public static NumberList GeometricList(int numberOfTerms, int baseNumber)
         {
             NumberList numberList = new NumberList();
             int x = 1;
             for (int i = 0; i < numberOfTerms; i++)
             {
-                x *= multiplier;
+                x *= baseNumber;
                 numberList.Add(x);
             }
             return numberList;
         }
 
+        public static NumberList PowerList (int numberOfTerms, int exponent)
+        {
+            NumberList numberList = new NumberList();
+            int x;
+            for (int i = 1; i <= numberOfTerms; i++)
+            {
+                x = (int)Math.Pow(Convert.ToDouble(i), Convert.ToDouble(exponent));
+                numberList.Add(x);
+            }
+            return numberList;
+        }
         public static NumberList StringToNumberList(string numberString)
         {
             int stringToInt = Convert.ToInt32(numberString);

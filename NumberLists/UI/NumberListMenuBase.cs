@@ -87,6 +87,11 @@ namespace NumberLists.UI
             return Prompt4PositiveInteger("What number would you like to multiply by?\n");
         }
 
+        public int GetExponent()
+        {
+            return Prompt4PositiveInteger("What number would you like for an exponent?\n");
+        }
+
         public int GetNumberToFactor()
         {
             return Prompt4PositiveInteger("What number would you like to factor?\n");

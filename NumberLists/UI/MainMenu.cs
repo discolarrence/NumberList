@@ -20,11 +20,11 @@ namespace NumberLists.UI
             Console.Clear();
 
             AddMenuItem("1", $"Arithmatic Sequences");
-            AddMenuItem("2", $"Exponential Sequences");
+            AddMenuItem("2", $"Geometric & Power Sequences");
             AddMenuItem("3", $"Special Number Sequences");
             AddMenuItem("4", $"Factors");
             AddMenuItem("5", $"Number Facts");
-            AddMenuItem("6", $"Saved Number Lists");
+            AddMenuItem("6", $"Saved Number Lists & Facts");
             AddMenuItem("X", $"Exit {_exit}");
         }
 
