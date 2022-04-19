@@ -22,7 +22,6 @@
                         SaverContainer.DisplayAllNumberLists();
                         break;
                     case "2":
-                        SaverContainer.DisplayAllNumberListInformation();
                         SaverContainer.DisplayListByID(GetListID());
                         break;
                     case "3":

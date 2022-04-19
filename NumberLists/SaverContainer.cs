@@ -1,6 +1,8 @@
 ﻿using CodeLouisvilleLibrary.Serialization.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.IO;
+
 
 namespace NumberLists
 {
@@ -19,7 +21,7 @@ namespace NumberLists
         public static IEnumerable<SaverContainer> RetrieveNumberLists()
         {
             NumberListSerializationService numberListSerializationService = new NumberListSerializationService();
-            return numberListSerializationService.GetAllAsync().Result;
+            return numberListSerializationService.GetAllAsync().Result; 
         }
 
         public static IEnumerable<SaverContainer> RetrieveNumberFacts()
@@ -32,49 +34,75 @@ namespace NumberLists
         public static void DisplayAllNumberLists()
         {
             IEnumerable<SaverContainer> savedNumberLists = RetrieveNumberLists();
-            foreach (SaverContainer savedNumberList in savedNumberLists)
+            try
             {
-                Console.WriteLine($"{savedNumberList.ID}:{savedNumberList.Description} Saved:{savedNumberList.DateSaved}");
-                savedNumberList.NumberList.WriteListWithSpacesAndNewLine();
+                foreach (SaverContainer savedNumberList in savedNumberLists)
+                {
+                    Console.WriteLine($"{savedNumberList.ID}:{savedNumberList.Description} Saved:{savedNumberList.DateSaved}");
+                    savedNumberList.NumberList.WriteListWithSpacesAndNewLine();
+                }
             }
+            catch (NullReferenceException)
+            {
+                Console.WriteLine("\nYou haven't saved any number lists yet.");
+            }
+            
         }
 
         public static void DisplayAllNumberListInformation()
         {
             IEnumerable<SaverContainer> savedNumberLists = RetrieveNumberLists();
-            foreach (SaverContainer savedNumberList in savedNumberLists)
+            try
             {
-                Console.WriteLine($"{savedNumberList.ID}:{savedNumberList.Description} Saved:{savedNumberList.DateSaved}");
+                foreach (SaverContainer savedNumberList in savedNumberLists)
+                {
+                    Console.WriteLine($"{savedNumberList.ID}:{savedNumberList.Description} Saved:{savedNumberList.DateSaved}");
+                }
+            }
+            catch (NullReferenceException)
+            {
+                Console.WriteLine("\nYou haven't saved any number lists yet.");
             }
         }
 
         public static void DisplayListByID(string userSelection)
         {
-            NumberListSerializationService numberListSerializationService = new NumberListSerializationService();
-            if (int.TryParse(userSelection, out int selectedID))
+            DisplayAllNumberListInformation();
+            if (File.Exists("UserLists.json"))
             {
-                SaverContainer selectedNumberListContainer = numberListSerializationService.GetByID(selectedID).Result;
-                if (selectedNumberListContainer != null)
+                NumberListSerializationService numberListSerializationService = new NumberListSerializationService();
+                if (int.TryParse(userSelection, out int selectedID))
                 {
-                    selectedNumberListContainer.NumberList.WriteListWithSpacesAndNewLine();
+                    SaverContainer selectedNumberListContainer = numberListSerializationService.GetByID(selectedID).Result;
+                    if (selectedNumberListContainer != null)
+                    {
+                        selectedNumberListContainer.NumberList.WriteListWithSpacesAndNewLine();
+                    }
+                    else
+                    {
+                        Console.WriteLine("No list with that ID");
+                    }
                 }
                 else
                 {
-                    Console.WriteLine("No list with that ID");
+                    Console.WriteLine("Try again.");
                 }
-            }
-            else
-            {
-                Console.WriteLine("Try again.");
-            }
+            }  
         }
 
         public static void DisplayAllNumberFacts()
         {
             IEnumerable<SaverContainer> savedNumberFacts = SaverContainer.RetrieveNumberFacts();
-            foreach (SaverContainer savedNumberFact in savedNumberFacts)
+            try
             {
-                Console.WriteLine($"{savedNumberFact.Description}");
+                foreach (SaverContainer savedNumberFact in savedNumberFacts)
+                {
+                    Console.WriteLine($"{savedNumberFact.Description}");
+                }
+            }
+            catch (NullReferenceException)
+            {
+                Console.WriteLine("\nYou haven't saved any number lists yet.");
             }
         }
     }
